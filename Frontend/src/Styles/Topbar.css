@@ -1,0 +1,85 @@
+/* Top bar */
+.top-bar {
+  background-color: #a2a0a0;
+  padding: 4px 0;
+}
+
+.top-bar-text {
+  font-size: 10px !important;
+  color: white;
+}
+
+/* Common button styling */
+.top-button {
+  border: none;
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 4px;
+  transition: all 0.3s ease;
+  min-width: 60px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Specific buttons with distinct colors */
+.language-dropdown {
+  background-color: orange;
+}
+
+.accessibility-dropdown {
+  background-color: #f4431f;
+}
+
+.e-employment {
+  background-color: #dc3545;
+}
+
+.telegram {
+  background-color: #1a73e8;
+}
+
+.whatsapp {
+  background-color: #28a745;
+}
+
+/* Optional: Make them circular (bubble style) */
+.top-button.round {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect */
+.top-button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* Blink animation for urgent buttons */
+.blink-bg {
+  animation: blinkingBackground 2s infinite;
+}
+
+@keyframes blinkingBackground {
+  0% { background-color: #dc3545; }
+  50% { background-color: #ff6b6b; }
+  100% { background-color: #dc3545; }
+}
+
+/* Responsive small screens */
+@media (max-width: 768px) {
+  .top-button {
+    font-size: 9px;
+    padding: 3px 6px;
+    min-width: 50px;
+  }
+}

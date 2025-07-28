@@ -1,0 +1,23 @@
+.nv-carousel-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.nv-carousel-card:hover {
+  transform: translateY(-5px);
+}
+
+.bg-sky {
+  background-color: #3db8d0 !important;
+}
+
+.bg-blue {
+  background-color: #007bff !important;
+}
+
+.bg-green {
+  background-color: #28a745 !important;
+}

@@ -1,0 +1,21 @@
+.footerItem {
+  transition: transform 0.2s ease-in-out;
+}
+.footerItem:hover {
+  transform: translateX(4px);
+  color: #ffd700 !important;
+}
+
+.footer-link:hover {
+  color: #ffd700 !important;
+  text-decoration: underline;
+}
+
+.social-hover {
+  transition: transform 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.social-hover:hover {
+  transform: scale(1.2) !important;
+  /* color: #fff700 !important; */
+}

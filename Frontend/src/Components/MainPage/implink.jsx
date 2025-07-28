@@ -1,0 +1,167 @@
+// import React from "react";
+// import "../../Styles/implink.css";
+
+// const links = [
+//   {
+//     icon: "bi-newspaper",
+//     title: "आज के समाचार",
+//     href: "https://example.com/today-news",
+//   },
+//   {
+//     icon: "bi-badge-ad-fill",
+//     title: "विज्ञापन संबंधित",
+//     href: "https://example.com/ads",
+//   },
+//   {
+//     icon: "bi-eye-fill",
+//     title: "प्रदर्शन विज्ञापन",
+//     href: "https://example.com/display-ads",
+//   },
+//   {
+//     icon: "bi-collection-play",
+//     title: "वीडियो गैलरी",
+//     href: "https://example.com/videos",
+//   },
+//   {
+//     icon: "bi-image",
+//     title: "फोटो गैलरी",
+//     href: "https://example.com/photos",
+//   },
+//   {
+//     icon: "bi-megaphone-fill",
+//     title: "प्रेस विज्ञप्ति",
+//     href: "https://example.com/press-release",
+//   },
+//   {
+//     icon: "bi-flag-fill",
+//     title: "सरकारी योजनाएं",
+//     href: "https://example.com/government-schemes",
+//   },
+//   {
+//     icon: "bi-bar-chart-line-fill",
+//     title: "आर्थिक आंकड़े",
+//     href: "https://example.com/economic-data",
+//   },
+//   {
+//     icon: "bi-book",
+//     title: "महत्वपूर्ण दस्तावेज़",
+//     href: "https://example.com/documents",
+//   },
+// ];
+
+
+// const Implink = () => {
+//   return (
+//     <div className="container-fluid py-4 important-links-section">
+//       <h4 className="text-center fw-bold mt-2">
+//         <span className="bi bi-link-45deg" style={{ fontSize: "40px" }}></span>{" "}
+//         महत्वपूर्ण लिंक
+//       </h4>
+
+//       <div className="row justify-content-center mt-4">
+//         {links.map((link, index) => (
+//           <div className="col-12 col-md-4 col-lg-3 mb-4" key={index}>
+//             <a
+//               href={link.href}
+//               className="text-decoration-none text-dark"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//             >
+//               <div className="card h-100 shadow link-card text-center py-4">
+//                 <h2 className={`bi ${link.icon} mb-3 link-icon`}></h2>
+//                 <p className="fw-semibold fs-5">{link.title}</p>
+//               </div>
+//             </a>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Implink;
+
+
+import React from "react";
+import "../../Styles/implink.css";
+
+const links = [
+  {
+    icon: "bi-newspaper",
+    title: "आज के समाचार",
+    href: "https://example.com/today-news",
+  },
+  {
+    icon: "bi-badge-ad-fill",
+    title: "विज्ञापन संबंधित",
+    href: "https://example.com/ads",
+  },
+  {
+    icon: "bi-eye-fill",
+    title: "प्रदर्शन विज्ञापन",
+    href: "https://example.com/display-ads",
+  },
+  {
+    icon: "bi-globe",
+    title: "सरकारी वेबसाइट",
+    href: "https://example.com/gov",
+  },
+  {
+    icon: "bi-bar-chart",
+    title: "आँकड़े और रिपोर्ट",
+    href: "https://example.com/stats",
+  },
+  {
+    icon: "bi-megaphone-fill",
+    title: "नवीन घोषणाएं",
+    href: "https://example.com/announcements",
+  },
+  {
+    icon: "bi-telephone-fill",
+    title: "संपर्क करें",
+    href: "https://example.com/contact",
+  },
+  {
+    icon: "bi-book",
+    title: "मार्गदर्शिका",
+    href: "https://example.com/guide",
+  },
+  {
+    icon: "bi-calendar-event",
+    title: "ईवेंट्स",
+    href: "https://example.com/events",
+  },
+];
+
+const Implink = () => {
+  return (
+    <div className="container-fluid py-4 important-links-section">
+      <h4 className="text-center fw-bold mt-2">
+        <span className="bi bi-link-45deg" style={{ fontSize: "36px" }}></span>{" "}
+        महत्वपूर्ण लिंक
+      </h4>
+
+      <div className="row justify-content-center mt-4">
+        {links.map((link, index) => (
+          <div className="col-6 col-sm-4 col-md-4 col-lg-3 mb-4" key={index}>
+            <a
+              href={link.href}
+              className="text-decoration-none text-dark"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="card h-100 shadow link-card text-center">
+                <div className="link-icon-wrapper">
+                  <i className={`bi ${link.icon} link-icon`}></i>
+                </div>
+                <p>{link.title}</p>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Implink;
