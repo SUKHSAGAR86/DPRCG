@@ -1,16 +1,17 @@
 import React from "react";
-import LogoSection from "./Logosection";
-import TopBar from "./Topbar";
+import LogoSection from "./LogoSection/Logosection";
+import TopBar from "./Topbar/Topbar";
 import MainCarouserSlider from "./MainCarouselSlider";
-import CMSpeech from "./CMSpeech";
-import CMNews from "./CMNews";
+import CMSpeech from "./CmSpeech/CMSpeech";
+import CMNews from "./CmNews/CMNews";
 import SuccessStories from "./SuccessStories";
-import CabinetNews from "./CabinetNews";
+import CabinetNews from "./CabinateNews/CabinetNews";
 import PhotoGallerySection from "./PhotoGallerySection";
 import SocialMedia from "./SocialMedia";
-import Implink from "./implink";
+import Implink from "./ImportantLink/implink";
 import UpperFooter from "./footer/upperFooter";
-import NavBar from "./NavBar";
+import NavBar from "./Navbar/NavBar";
+
 
 const mainpage = () => {
   return (
@@ -22,7 +23,7 @@ const mainpage = () => {
         <LogoSection />
       </div>
       <div>
-        <NavBar />
+        <NavBar/>
       </div>
       <div className="mt-4 mb-4">
         <MainCarouserSlider />

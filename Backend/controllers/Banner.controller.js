@@ -3,9 +3,13 @@ const {pool,poolConnect,sql} = require("../database/dbConfig");
 
 const getBanners = async (req, res) => {
     try {
-        await poolConnect; // ensures that the pool has connected
+        await poolConnect; 
     
-        const result = await pool.request().query("SELECT * FROM banners");
+        const result = await pool
+          .request()
+          .query(
+            `SELECT * FROM banners where status ='1' Order By createdtime DESC `
+          );
         res.status(200).json(result.recordset);
     } catch (err) {
         console.error("Error fetching banners:", err);

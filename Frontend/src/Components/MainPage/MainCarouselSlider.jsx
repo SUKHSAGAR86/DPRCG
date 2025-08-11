@@ -74,7 +74,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CMProfile from './CMProfile';
-
+import defaultImg from '../../assets/image/default_news.jpg'
 const MainCarouselSlider = () => {
   const [banners, setBanners] = useState([]);
 
@@ -104,12 +104,13 @@ const MainCarouselSlider = () => {
             {banners.map((banner, index) => (
               <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
                 <img
-                  src={`http://localhost:3081/api/banners/${banner.imageUrlHindi}`}
+                  src={banner.imageUrlHindi ? `http://localhost:3081/api/banners/${banner.imageUrlHindi}`:defaultImg }
+                  onError={(e)=>(e.target.src=defaultImg)}
                   className="d-block w-100 rounded-2 slideImage"
                   alt={`Slide ${index + 1}`}
                 />
                 <div className="carousel-caption">
-                  {banner.title_hindi}
+                  {banner.title_hindi ?.trim()? banner.title_hindi:"शीर्षक उपलब्ध नहीं"}
                 </div>
               </div>
             ))}
@@ -124,6 +125,8 @@ const MainCarouselSlider = () => {
           >
             <span className="carousel-control-prev-icon"></span>
           </button>
+
+          
           <button
             className="carousel-control-next"
             type="button"
