@@ -321,7 +321,7 @@ const CabinetNews = () => {
               ))}
 
               {/* More Button */}
-              <button className="btn btn-primary mt-2 fw-bold align-self-start"onClick={()=>navigate("/cabinatenews")}>
+              <button className="btn btn-primary shadow-lg rounded-5 mt-2 fw-bold align-self-start"onClick={()=>navigate("/cabinatenews")}>
                 और देखें  &gt;
               </button>
             </div>
